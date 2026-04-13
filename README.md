@@ -28,41 +28,42 @@ Create campaign (2-step process: details → review)
 Leaderboards (batch rankings)
 
 #File Structure
-firstattempt2026_padua/
+APPDEV/
+├── node_modules/
+│
+├── src/
+│   ├── lib/
+│   │   ├── components/
+│   │   │   ├── AdminDashboard.svelte
+│   │   │   ├── Alerts.svelte
+│   │   │   ├── AlumniDashboard.svelte
+│   │   │   ├── Auth.svelte
+│   │   │   ├── Campaigns.svelte
+│   │   │   ├── Certificates.svelte
+│   │   │   ├── CheckoutModal.svelte
+│   │   │   ├── CreateCampaign.svelte
+│   │   │   ├── Events.svelte
+│   │   │   ├── History.svelte
+│   │   │   ├── Leaderboard.svelte
+│   │   │   ├── ManageCampaigns.svelte
+│   │   │   ├── Profile.svelte
+│   │   │   └── Sidebar.svelte
+│   │
+│   │   ├── data/
+│   │   ├── data.js
+│   │   ├── icons.js
+│   │   └── store.js
+│
+│   ├── app.css
+│   ├── App.svelte
+│   ├── main.js
+│   └── index.html
 │
 ├── index.html
 ├── package.json
 ├── package-lock.json
-├── vite.config.js
 ├── svelte.config.js
-├── README.md
-│
-└── src/
-    ├── main.js
-    ├── App.svelte
-    ├── app.css
-    │
-    ├── lib/
-    │   ├── components/
-    │   │   ├── AdminDashboard.svelte
-    │   │   ├── Alerts.svelte
-    │   │   ├── AlumniDashboard.svelte
-    │   │   ├── Auth.svelte
-    │   │   ├── Campaigns.svelte
-    │   │   ├── Certificates.svelte
-    │   │   ├── CheckoutModal.svelte
-    │   │   ├── CreateCampaign.svelte
-    │   │   ├── Events.svelte
-    │   │   ├── History.svelte
-    │   │   ├── Leaderboard.svelte
-    │   │   ├── ManageCampaigns.svelte
-    │   │   ├── Profile.svelte
-    │   │   └── Sidebar.svelte
-    │   │
-    │   ├── data/
-    │   ├── data.js
-    │   ├── icons.js
-    │   └── store.js
+└── vite.config.js
 
 Step 1: Clone the repository
 git clone https://github.com/lesythx/firstattempt2026_padua.git
