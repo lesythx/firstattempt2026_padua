@@ -1,6 +1,7 @@
 # Alumni Donation Hub — Padua
-Svelte Vite JavaScript No Backend
-Alumni Donation Hub is a web-based donation management platform designed for Blue Knight University. It allows alumni to contribute to fundraising campaigns, participate in events, track their donation history, and manage their personal profiles. Administrators can create and manage campaigns, monitor donation progress, and analyze engagement through dashboards and leaderboards.
+Overview
+The Alumni Donation Hub is a desktop-focused Progressive Web Application (PWA) built using Svelte (HTML, CSS, JavaScript). It provides a streamlined platform for alumni to participate in donation campaigns, stay updated with events, and manage their profiles, while giving administrators tools to manage campaigns and monitor engagement.
+This version focuses on transforming the application into a high-performance, offline-ready PWA.
 
 # Framework
 Svelte — a modern frontend framework that compiles components into efficient JavaScript. Each screen of the application is built as a reusable Svelte component using reactive state management, scoped styling, and modular architecture.
@@ -18,99 +19,69 @@ Ensure to meet these goals for PWA:
 For the Admin side, include a dashboard with key metrics, campaign management with progress tracking, a simple campaign creation flow (details → donation options → publish), and a donation leaderboard.
 Use reusable Svelte components, mock data, and simple state management, and design a clean desktop layout with a fixed sidebar using the color palette #031273, #0504AA, #2337C6, #4169E1, 
 
-Screens covered:
-Login screen
-Password recovery
-Role selection (Alumni / Admin)
 
-Dashboard (donation summaries, charts, urgent campaigns)
-Campaign browsing & details
-Events (calendar/list view with RSVP)
-Donation checkout (preset/custom amount, receipt, anonymous toggle)
-Donation history
-Notifications
-Profile management
-Certificate vault
+# Navigate to project
+cd alumni-donation-hub
 
-Admin dashboard (analytics overview)
-Campaign management (track progress & status)
-Create campaign (2-step process: details → review)
-Leaderboards (batch rankings)
-
-
-````
-Step 1: Clone the repository
-git clone https://github.com/lesythx/firstattempt2026_padua.git
-
-Step 2: Navigate into the project folder
-cd firstattempt2026_padua
-
-Step 3: Install dependencies
+# Install dependencies
 npm install
 
+# Run development server
+npm run dev
+
+
+Step 1: Clone the repository
+git clone https://github.com/lesythx/firstattempt2026_padua.git
+Step 2: Navigate into the project folder
+cd firstattempt2026_padua
+Step 3: Install dependencies
+npm install
 Step 4: Run development server
 npm run dev
 
-| Role   | How to Log In                  | What You'll See                                                    |
-| ------ | ------------------------------ | ------------------------------------------------------------------ |
-| Alumni | Enter any email + any password | Dashboard, Campaigns, Events, Donations, Certificates, Profile     |
-| Admin  | Enter any email + any password | Admin Dashboard, Campaign Management, Create Campaign, Leaderboard |
-```
+Issues / Hallucinations Fixed
+- AI initially generated extra folders and complex routing, violating the “simple structure” requirement → manually simplified project structure
+- Service worker had incorrect scope and registration path → corrected to root-level registration
+- Manifest had missing/incorrect icon sizes → fixed using Branding Kit assets
+- Caching strategy initially applied cache-first to dynamic data, causing stale content → changed to network-first
+- Some generated components used non-Svelte syntax (React-like patterns) → rewritten into proper Svelte format
+- Login page not 
 
 AI Tools Used
 
 ChatGPT — primary tool for structuring, UI planning, and Svelte implementation guidance
 Claude — secondary reference for additional implementation support
 
-Prompt
-
-The following prompt was used to guide the development of the application:
-
-You are developing a desktop-focused Alumni Donation Hub web application in Svelte using HTML, CSS, and JavaScript within VS Code, featuring a step-by-step user flow (login, password recovery, and role selection for Alumni or Admin), where Alumni users access a dashboard with donation summaries, charts, campaigns, events, checkout, notifications, and profile management, while Admin users manage campaigns and analytics, all built with reusable components, mock data, Svelte state management, and a clean, responsive layout optimized primarily for desktop with a sidebar navigation (Home, Events, Give, Alerts, Profile) and consistent design using your defined color system.
 
 Screenshots
 #1 Login Screen
-<img width="1890" height="990" alt="Login Screen" src="https://github.com/user-attachments/assets/3b61fcde-b566-4b16-b0cc-5e105c4a88bc" />
-
-#1A Reset Password
-<img width="341" height="377" alt="Reset Password" src="https://github.com/user-attachments/assets/72552c3c-67ea-4078-8a11-1d0e90fe20ac" />
-<img width="309" height="369" alt="Reset Password Step 2" src="https://github.com/user-attachments/assets/3d2069b7-785c-49b5-bcc9-370b73b7e962" />
+<img width="1916" height="1016" alt="image" src="https://github.com/user-attachments/assets/74532006-e69c-457c-8d7c-7a7da7f30c2d" />
 
 #2 Role Selection
-<img width="957" height="488" alt="Role Selection" src="https://github.com/user-attachments/assets/592fc2ff-bf31-4e65-9f67-82c9ca7a08e5" />
+<img width="1918" height="1003" alt="image" src="https://github.com/user-attachments/assets/e805c98d-b2f2-47ed-a866-7a9bbceec6af" />
 
-#3 Alumni Dashboard
-<img width="944" height="496" alt="Alumni Dashboard" src="https://github.com/user-attachments/assets/fb823b5e-0956-4a13-b882-4c4ded6ab2e7" />
+#3 Alumni Home
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/f6b68815-b488-47c1-93cf-719c20bcc5f7" />
 
-#3A Donation Modal
+#4 Alumni Events
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/dfd3d471-cfe6-4b65-af14-74364c0f357b" />
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/83e86596-ce54-4568-ad5c-d19015bb3534" />
 
-<img width="374" height="432" alt="Donation Modal" src="https://github.com/user-attachments/assets/edfc6a31-3cda-4f6a-b6ef-e58898ef5ac7" />
-<img width="339" height="442" alt="Donation Step 2" src="https://github.com/user-attachments/assets/d8f08cd7-d456-4385-b6dc-d23e895c98fc" /> 
-<img width="323" height="332" alt="Donation Receipt" src="https://github.com/user-attachments/assets/55db8c7f-4ed0-42b8-a2ed-3fb91ec3b764" />
+#5 Donation
+<img width="1919" height="1007" alt="image" src="https://github.com/user-attachments/assets/21ceb86b-5daf-41b5-9fb2-1a78f56f6b74" />
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8eeba6de-da12-47d1-ba5c-68a4af1298f6" />
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/888d0c65-589a-4b7c-90dc-ae037358828c" />
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/94803fdb-371f-47d9-af24-9f2118960a53" />
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/e51525bd-47f5-4aee-b644-29fac6d0b0f5" />
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/66f0b976-1dfa-4b1d-9ffd-18bb9d2e4cbf" />
 
-#4 Campaigns
-<img width="941" height="491" alt="Campaigns" src="https://github.com/user-attachments/assets/c5d9b4fa-baff-4a5e-9965-b777d897a23b" />
+#6 Notifications
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/1a7b7fad-dbc6-4115-84a4-353154fabae5" />
 
-#5 Events
-<img width="940" height="496" alt="Events" src="https://github.com/user-attachments/assets/82324169-a89d-48f1-8ef5-7ed92e8bba77" />
+#7 Profile
+<img width="1919" height="1007" alt="image" src="https://github.com/user-attachments/assets/0520537f-b389-40c3-a016-4b2948aa55b4" />
 
-#6 My Donations
-<img width="955" height="495" alt="Donation History" src="https://github.com/user-attachments/assets/963363a6-10fe-4f4c-a55f-51b49feb5a67" />
-
-#7 Certificates
-<img width="942" height="498" alt="Certificates" src="https://github.com/user-attachments/assets/35dd7ad7-6836-4504-a589-2d323ccd7d5d" />
-
-#8 Notifications
-<img width="959" height="497" alt="Notifications" src="https://github.com/user-attachments/assets/fddaef32-9503-417b-9f96-3052733c000e" />
-
-#9 Profile Admin Module
-<img width="956" height="495" alt="Profile" src="https://github.com/user-attachments/assets/6ca3e0fc-89f4-4230-8744-4d89e5a5dc08" />
-
-#10 Create Campaign 
-<img width="804" height="488" alt="Create Campaign" src="https://github.com/user-attachments/assets/99f3500d-5a10-4ba0-9d0e-cbdf1c0139be" />
-
-#11 Review Campaign 
-<img width="807" height="375" alt="Review Campaign" src="https://github.com/user-attachments/assets/07c6e6db-5bd2-402b-bdd0-790c2361cce5" />
-
-#12 Leaderboard
-<img width="956" height="336" alt="Leaderboard" src="https://github.com/user-attachments/assets/2df2d88f-cc6d-4317-a4fb-6185f0c1df32" />
+#As an admin
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/deb8a609-99bc-4b3f-a947-ead684114b7a" />
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/2892db92-3177-46e3-a237-de2601144161" />
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/86032edc-345f-4189-a0f3-24e7d56e026b" />
