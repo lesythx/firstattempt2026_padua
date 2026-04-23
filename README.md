@@ -21,7 +21,7 @@ Use reusable Svelte components, mock data, and simple state management, and desi
 
 
 # Navigate to project
-cd alumni-donation-hub
+cd C:\Users\Ged\my-app\src\donation-hub
 
 # Install dependencies
 npm install
