@@ -5,8 +5,18 @@ Alumni Donation Hub is a web-based donation management platform designed for Blu
 # Framework
 Svelte — a modern frontend framework that compiles components into efficient JavaScript. Each screen of the application is built as a reusable Svelte component using reactive state management, scoped styling, and modular architecture.
 
-Module
-Module 3: Donations
+# Prompt
+You are developing a desktop-focused Alumni Donation Hub web application using Svelte (HTML, CSS, JavaScript) in VS Code, with a simple structure limited to only five main sections: Home, Events, Donations, Notifications, and Profile, avoiding unnecessary folders or complex branching. The app should follow a clear flow starting with Login, Forgot Password, and Role Selection (Alumni or Admin).
+For the Alumni side, the Home dashboard shows donation summaries, charts, top donors, and urgent campaigns; Events includes both calendar and list views with RSVP options; Donations handles campaigns, detailed pages, secure checkout (GCash, Maya, Card), donation history, and certificates; Notifications displays updates and alerts with quick actions; and Profile allows viewing and editing of personal info, records, and credentials.
+
+Ensure to meet these goals for PWA:
+(1) Generating a valid manifest.json (with University Branding).
+(2) Registering a Service Worker.
+(3) Implementing Caching Strategies so the app loads instantly and works offline.
+(4) Managing the App Icons (using the assets provided in the Branding Kit).
+
+For the Admin side, include a dashboard with key metrics, campaign management with progress tracking, a simple campaign creation flow (details → donation options → publish), and a donation leaderboard.
+Use reusable Svelte components, mock data, and simple state management, and design a clean desktop layout with a fixed sidebar using the color palette #031273, #0504AA, #2337C6, #4169E1, 
 
 Screens covered:
 Login screen
@@ -27,38 +37,8 @@ Campaign management (track progress & status)
 Create campaign (2-step process: details → review)
 Leaderboards (batch rankings)
 
-#File Structure
-```
-alumni-donation-app/
-├── node_modules/
-├── src/
-│   ├── lib/
-│   ├── components/
-│   │   ├── AdminDashboard.svelte
-│   │   ├── AlumniDashboard.svelte
-│   │   ├── Auth.svelte
-│   │   ├── Campaigns.svelte
-│   │   ├── Certificates.svelte
-│   │   ├── CheckoutModal.svelte
-│   │   ├── CreateCampaign.svelte
-│   │   ├── Events.svelte
-│   │   ├── History.svelte
-│   │   ├── Leaderboard.svelte
-│   │   ├── ManageCampaigns.svelte
-│   │   ├── Profile.svelte
-│   │   └── Sidebar.svelte
-│   ├── data/
-│   │   └── data.js
-│   ├── store.js
-│   ├── App.svelte
-│   └── main.js
-├── index.html
-├── app.css
-├── package.json
-├── package-lock.json
-├── svelte.config.js
-└── vite.config.js
-```
+
+````
 Step 1: Clone the repository
 git clone https://github.com/lesythx/firstattempt2026_padua.git
 
@@ -75,6 +55,7 @@ npm run dev
 | ------ | ------------------------------ | ------------------------------------------------------------------ |
 | Alumni | Enter any email + any password | Dashboard, Campaigns, Events, Donations, Certificates, Profile     |
 | Admin  | Enter any email + any password | Admin Dashboard, Campaign Management, Create Campaign, Leaderboard |
+```
 
 AI Tools Used
 
